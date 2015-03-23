@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<package>
+  <name>crom_sim_bringup</name>
+  <version>1.0.0</version>
+  <description>The crom_sim_bringup package</description>
+
+  <maintainer email="rnavarro@robotnik.es">Román Navarro</maintainer>
+
+  <license>BSD</license>
+
+
+  <!-- Url tags are optional, but mutiple are allowed, one per tag -->
+  <!-- Optional attribute type can be: website, bugtracker, or repository -->
+  <!-- Example: -->
+  <!-- <url type="website">http://wiki.ros.org/crom_sim_bringup</url> -->
+
+
+  <author email="rnavarro@robotnik.es">Román Navarro</author>
+
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <run_depend>crom_gazebo</run_depend>
+  <run_depend>crom_moveit_config</run_depend>
+
+
+  <export>
+  </export>
+</package>

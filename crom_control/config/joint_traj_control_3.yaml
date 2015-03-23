@@ -1,0 +1,105 @@
+# Indepent JointTrajectoryController for arms and waist
+# Position controller for gripper, hand and head
+
+crom:
+  # Publish all joint states -----------------------------------
+  joint_state_controller:
+    type: joint_state_controller/JointStateController
+    publish_rate: 50
+
+  # Waist controller         ------------------------------------
+  waist_controller:
+    type: "position_controllers/JointTrajectoryController"
+    joints:
+      - waist_joint
+  
+  # Arm controller Left      ------------------------------------
+  left_arm_controller:
+    type: "position_controllers/JointTrajectoryController"
+    joints:
+      - left_arm_1_joint
+      - left_arm_2_joint
+      - left_arm_3_joint
+      - left_arm_4_joint
+      - left_arm_5_joint
+      - left_arm_6_joint
+
+  # Arm controller Right      ------------------------------------
+  right_arm_controller:
+    type: "position_controllers/JointTrajectoryController"
+    joints:
+      - right_arm_1_joint
+      - right_arm_2_joint
+      - right_arm_3_joint
+      - right_arm_4_joint
+      - right_arm_5_joint
+      - right_arm_6_joint
+
+
+  # Head controller      ------------------------------------
+  head_pan_position_controller:
+    type: position_controllers/JointPositionController
+    joint: head_pan_joint
+  head_tilt_position_controller:
+    type: position_controllers/JointPositionController
+    joint: head_tilt_joint
+    
+  #Hand controller -------------------------------------------
+  bh11_position_controller:
+    type: position_controllers/JointPositionController
+    joint: bh_j11_joint
+  bh12_position_controller:
+    type: position_controllers/JointPositionController
+    joint: bh_j12_joint
+  bh13_position_controller:
+    type: position_controllers/JointPositionController
+    joint: bh_j13_joint
+  bh21_position_controller:
+    type: position_controllers/JointPositionController
+    joint: bh_j21_joint
+  bh22_position_controller:
+    type: position_controllers/JointPositionController
+    joint: bh_j22_joint
+  bh23_position_controller:
+    type: position_controllers/JointPositionController
+    joint: bh_j23_joint
+  bh33_position_controller:
+    type: position_controllers/JointPositionController
+    joint: bh_j33_joint
+
+
+  # Gripper controller      ------------------------------------
+  jg1_position_controller:
+    type: position_controllers/JointPositionController
+    joint: wsg50_finger_1_start_joint
+  jg2_position_controller:
+    type: position_controllers/JointPositionController
+    joint: wsg50_finger_2_start_joint      
+
+  gazebo_ros_control/pid_gains:
+    waist_joint: {p: 10000.0, i: 1.0, d: 1.0}
+    left_arm_1_joint: {p: 10000.0, i: 1.0, d: 1.0}
+    left_arm_2_joint: {p: 10000.0, i: 1.0, d: 1.0}
+    left_arm_3_joint: {p: 10000.0, i: 1.0, d: 1.0}
+    left_arm_4_joint: {p: 10000.0, i: 1.0, d: 1.0}
+    left_arm_5_joint: {p: 10000.0, i: 1.0, d: 1.0}
+    left_arm_6_joint: {p: 10000.0, i: 1.0, d: 1.0}
+    right_arm_1_joint: {p: 10000.0, i: 0.0, d: 0.0}
+    right_arm_2_joint: {p: 10000.0, i: 0.0, d: 0.0}
+    right_arm_3_joint: {p: 10000.0, i: 0.0, d: 0.0}
+    right_arm_4_joint: {p: 10000.0, i: 0.0, d: 0.0}
+    right_arm_5_joint: {p: 10000.0, i: 0.0, d: 0.0}
+    right_arm_6_joint: {p: 10000.0, i: 0.0, d: 0.0}
+    head_pan_joint: {p: 50.0, i: 5.0, d: 10.0}
+    head_tilt_joint: {p: 50.0, i: 5.0, d: 10.0}
+    wsg50_finger_1_start_joint: {p: 100.0,  d: 1, i: 1, i_clamp: 1}
+    wsg50_finger_2_start_joint: {p: 100.0,  d: 1, i: 1, i_clamp: 1}
+    bh_j11_joint: {p: 500,  d: 1, i: 5, i_clamp: 1}
+    bh_j12_joint: {p: 500,  d: 1, i: 5, i_clamp: 1}
+    bh_j13_joint: {p: 500,  d: 1, i: 5, i_clamp: 1}
+    bh_j21_joint: {p: 500,  d: 1, i: 5, i_clamp: 1}
+    bh_j22_joint: {p: 500,  d: 1, i: 5, i_clamp: 1}
+    bh_j23_joint: {p: 500,  d: 1, i: 5, i_clamp: 1}
+    bh_j32_joint: {p: 500,  d: 1, i: 5, i_clamp: 1}
+    bh_j33_joint: {p: 500,  d: 1, i: 5, i_clamp: 1}
+

@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<launch>
+
+  <!-- Launches Gazebo model and world -->
+  <include file="$(find crom_gazebo)/launch/crom.launch"/>
+  
+   <!-- Moveit plugin for RVIZ with the configuration to work with Gazebo simulation -->
+  <include file="$(find crom_moveit_config)/launch/gazebo/demo_gazebo.launch"/>
+
+</launch>

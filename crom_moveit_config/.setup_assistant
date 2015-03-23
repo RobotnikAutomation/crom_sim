@@ -1,0 +1,8 @@
+moveit_setup_assistant_config:
+  URDF:
+    package: crom_description
+    relative_path: robots/crom.urdf.xacro
+  SRDF:
+    relative_path: config/crom.srdf
+  CONFIG:
+    generated_timestamp: 1427132035

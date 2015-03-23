@@ -1,0 +1,66 @@
+controller_list:
+  - name: fake_right_arm_controller
+    joints:
+      - right_arm_1_joint
+      - right_arm_2_joint
+      - right_arm_3_joint
+      - right_arm_4_joint
+      - right_arm_5_joint
+      - right_arm_6_joint
+  - name: fake_left_arm_controller
+    joints:
+      - left_arm_1_joint
+      - left_arm_2_joint
+      - left_arm_3_joint
+      - left_arm_4_joint
+      - left_arm_5_joint
+      - left_arm_6_joint
+  - name: fake_right_gripper_controller
+    joints:
+      - wsg50_finger_1_start_joint
+      - wsg50_finger_2_start_joint
+  - name: fake_left_hand_controller
+    joints:
+      - bh_j11_joint
+      - bh_j12_joint
+      - bh_j13_joint
+      - bh_j21_joint
+      - bh_j22_joint
+      - bh_j23_joint
+      - bh_j32_joint
+      - bh_j33_joint
+  - name: fake_left_arm_waist_controller
+    joints:
+      - waist_joint
+      - left_arm_1_joint
+      - left_arm_2_joint
+      - left_arm_3_joint
+      - left_arm_4_joint
+      - left_arm_5_joint
+      - left_arm_6_joint
+  - name: fake_both_arms_controller
+    joints:
+      - left_arm_1_joint
+      - left_arm_2_joint
+      - left_arm_3_joint
+      - left_arm_4_joint
+      - left_arm_5_joint
+      - left_arm_6_joint
+      - right_arm_1_joint
+      - right_arm_2_joint
+      - right_arm_3_joint
+      - right_arm_4_joint
+      - right_arm_5_joint
+      - right_arm_6_joint
+  - name: fake_test_left_hand_controller
+    joints:
+      []
+  - name: fake_right_arm_waist_controller
+    joints:
+      - waist_joint
+      - right_arm_1_joint
+      - right_arm_2_joint
+      - right_arm_3_joint
+      - right_arm_4_joint
+      - right_arm_5_joint
+      - right_arm_6_joint
